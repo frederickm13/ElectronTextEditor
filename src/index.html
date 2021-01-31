@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Electron Text Editor</title>
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
+
+    <link rel="stylesheet" href="lib/w3.css">
+</head>
+<body style="background: white;">
+    <!-- Main menu -->
+    <div id="main-menu" class="w3-display-container" style="width: 100vw; height: 100vh;">
+        <div class="w3-display-middle w3-mobile w3-center">
+            <a id="open-existing" href="#" class="w3-button w3-border w3-border-grey w3-round">Open Existing</a>
+            <a id="create-new" href="#" class="w3-button w3-border w3-border-grey w3-round">Create New</a>
+
+            <!-- Hidden file input -->
+            <input type="file" id="open-existing-input" name="myfile" accept="text/*" class="w3-hide">
+        </div>
+    </div>
+    
+    <!-- Text editor form -->
+    <div id="text-edit-form" class="w3-container w3-hide" style="width: 100vw; height: 100vh;">
+        <form class="w3-container" style="height: 100%; width: 100%;">
+            <div class="w3-cell-row" style="height: 15%; width:100%;">
+                <div class="w3-cell w3-cell-middle">
+                    <h1 id="file-name">Title Here</h1>
+                </div>
+                <div class="w3-cell w3-cell-middle w3-right-align">
+                    <input id="save-button" name="Save" value="Save" class="w3-button w3-border w3-border-grey w3-round" type="button">
+                    <input id="close-button" name="Close" value="Close" class="w3-button w3-border w3-border-grey w3-round" type="button">
+                </div>
+            </div>
+            <div style="height: 85%; width: 100%; overflow: auto;">
+                <input id="file-path" name="FilePath" value="" class="w3-hide">
+                <textarea id="text-content" class="w3-input w3-border w3-round" style="height: 100%; width: 100%; resize: none"></textarea>
+            </div>
+        </form>
+    </div>
+
+    <script src="./index.js" type="text/javascript"></script>
+</body>
+</html>

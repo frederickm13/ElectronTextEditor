@@ -1,0 +1,16 @@
+{
+  "name": "ElectronTextEditor",
+  "version": "1.0.0",
+  "description": "Text editor application written using Electron",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron ."
+  },
+  "keywords": [],
+  "author": "Erick McCollum",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^11.1.1"
+  }
+}
